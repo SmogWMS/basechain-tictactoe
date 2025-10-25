@@ -1,14 +1,7 @@
-import { ethers } from "hardhat";
-
-async function main() {
-  const TicTacToe = await ethers.getContractFactory("TicTacToe");
-  const tic = await TicTacToe.deploy();
-  await tic.deployed();
-
-  console.log("✅ TicTacToe deployed to:", tic.address);
-}
-
-main().catch((error) => {
-  console.error("❌ Deployment failed:", error);
-  process.exitCode = 1;
-});
+export const NETWORK = {
+  chainId: 44787, // Alfajores testnet
+  chainName: "Celo Alfajores Testnet",
+  rpcUrls: ["https://alfajores-forno.celo-testnet.org"],
+  nativeCurrency: { name: "CELO", symbol: "CELO", decimals: 18 },
+  blockExplorerUrls: ["https://alfajores.celoscan.io"],
+};
