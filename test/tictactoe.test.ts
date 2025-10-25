@@ -18,8 +18,10 @@ describe("TicTacToe", function () {
     await tic.connect(a).play(gameId, 4);
     await tic.connect(b).play(gameId, 2);
     await tic.connect(a).play(gameId, 8);
+  
 
     const g = await tic.games(gameId);
     expect(g.status).to.not.equal(1);
+      npx hardhat run scripts/deploy.ts --network alfajores
   });
 });
