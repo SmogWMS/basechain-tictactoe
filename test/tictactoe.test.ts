@@ -22,6 +22,5 @@ describe("TicTacToe", function () {
 
     const g = await tic.games(gameId);
     expect(g.status).to.not.equal(1);
-      npx hardhat run scripts/deploy.ts --network alfajores
   });
 });
